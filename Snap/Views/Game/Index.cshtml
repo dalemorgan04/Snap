@@ -1,0 +1,78 @@
+﻿@using Snap.Models.Enums;
+@model Snap.ViewModels.GameViewModel;
+@{
+    ViewData["Title"] = "Snap";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Snap
+                </h2>
+                <p>
+                    Start a new game here:
+                    @Html.ActionLink("Deal", "GetNewGame", "Game", null, new { Class = "btn btn-success new-game" })
+                </p>
+            </div>
+            @if (Model.GameHasStarted)
+            {
+
+                @if (!Model.GameHasEnded)
+                {
+                    <div class="row" id="game">
+
+                        @Html.Hidden("IsPlayersTurn", Model.IsPlayersTurn)
+                        @Html.Hidden("ComputerCallSnap", Model.ComputerCallSnap)
+
+                        @if (Model.SnapWasCalled)
+                        {
+                            <div class="col-sm-12 snap-message">
+                                <p>@Model.SnapMessage</p>
+                            </div>
+                        }
+                        <div class="col-sm-1 col-md-4">
+                            <p>Your Number Of Cards: @Model.PlayerCardCount</p>
+                            @if (Model.IsPlayersTurn)
+                            {
+                                <p><b>Your turn</b></p>
+                            }
+                        </div>
+                        <div class="col-sm-10 col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Card on the table:</h6>
+                                    <h5 class="card-title">@Model.CurrentCardDescription</h5>
+                                    @Html.ActionLink("SNAP!", "CallSnap", "Game", new { PlayerType = PlayerType.Player }, new { Class = "btn btn-warning snap" })
+                                    @if (Model.IsPlayersTurn)
+                                    {
+                                        @Html.ActionLink("Play Card", "PlayCard", "Game", new { PlayerType = PlayerType.Player }, new { Class = "btn btn-primary play-card" })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1 col-md-4">
+                            <p>Computer Number Of Cards : @Model.ComputerCardCount</p>
+                            @if (!Model.IsPlayersTurn)
+                            {
+                                <p><b>Computers turn, thinking...</b></p>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+        <div class="row" id="game-end">
+            <div class="col-sm-12">
+                <h2>Game Over</h2>
+            </div>
+            <div class="col-sm-12">
+                <p>The <b>@Model.WinningPlayer</b> wins!!</p>
+            </div>
+        </div>
+                }
+            }
+        </div>
+    </div>
+</div>

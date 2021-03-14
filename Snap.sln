@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snap", "Snap\Snap.csproj", "{65598891-6AE4-41D5-BFB7-CC87ED400AC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnapTests", "SnapTests\SnapTests.csproj", "{752BE0E1-D1B5-4A5A-A040-9769B883CBC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65598891-6AE4-41D5-BFB7-CC87ED400AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65598891-6AE4-41D5-BFB7-CC87ED400AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65598891-6AE4-41D5-BFB7-CC87ED400AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65598891-6AE4-41D5-BFB7-CC87ED400AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752BE0E1-D1B5-4A5A-A040-9769B883CBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752BE0E1-D1B5-4A5A-A040-9769B883CBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752BE0E1-D1B5-4A5A-A040-9769B883CBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752BE0E1-D1B5-4A5A-A040-9769B883CBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4702DA58-8AA7-4D29-B1BA-EB8EEADBAC8A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿.snap {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.play-card {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.snap-message {
+    text-align: center;
+    font-weight: bold;
+}
